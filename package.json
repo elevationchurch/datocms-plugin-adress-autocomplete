@@ -1,7 +1,17 @@
 {
-  "name": "datocms-address-autocomplete",
+  "name": "datocms-plugin-address-autocomplete",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://github.com/elevationchurch/datocms-plugin-adress-autocomplete",
+  "description": "A React-based implementation of Google's Address Autocomplete API, for DatoCMS.",
+  "keywords": [
+    "datocms-plugin"
+  ],
+  "datoCmsPlugin": {
+    "title": "DatoCMS Plugin Address Autocomplete",
+    "coverImage": "https://developers.google.com/maps/documentation/javascript/place-autocomplete",
+    "entryPoint": "build/index.html",
+    "permissions": []
+  },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.15.1",
     "@googlemaps/react-wrapper": "^1.1.35",
@@ -43,11 +53,5 @@
   "devDependencies": {
     "@types/google.maps": "^3.52.4",
     "cross-env": "^7.0.3"
-  },
-  "datoCmsPlugin": {
-    "title": "",
-    "previewImage": "",
-    "coverImage": "",
-    "entryPoint": "build/index.html"
   }
 }
