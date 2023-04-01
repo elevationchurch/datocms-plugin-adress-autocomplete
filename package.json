@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-address-autocomplete",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/elevationchurch/datocms-plugin-adress-autocomplete",
   "description": "A React-based implementation of Google's Address Autocomplete API, for DatoCMS.",
   "keywords": [
