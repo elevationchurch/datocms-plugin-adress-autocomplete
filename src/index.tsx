@@ -24,15 +24,6 @@ connect({
       },
     ];
   },
-  // overrideFieldExtensions: (field) => {
-  //   if (field.attributes.api_key === 'address') {
-  //     return {
-  //       editor: {
-  //         id: 'address',
-  //       },
-  //     };
-  //   }
-  // },
   renderFieldExtension: (fieldExtensionId, ctx) => {
     switch (fieldExtensionId) {
       case 'address':
