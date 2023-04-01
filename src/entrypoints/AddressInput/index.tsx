@@ -26,6 +26,7 @@ interface AddressInputProps {
 
 const initialAddress = {
   administrative_area_level_1: '',
+  formatted_address: '',
   street_number: '',
   route: '',
   locality: '',
@@ -49,7 +50,7 @@ const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
   // URL to Google's library
   const [src, setSrc] = useState('');
   const [address, setAddress] = useState<{ [key: string]: any }>(
-    initialValue.current,
+    initialValue.current || initialAddress,
   );
 
   const inputRef = createRef<HTMLInputElement>();
@@ -127,7 +128,7 @@ const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
             <TextInput
               inputRef={inputRef}
               onFocus={loadLibOnFocus}
-              defaultValue={address['formatted_address'] || ''}
+              defaultValue={address.formatted_address || ''}
               onChange={(e) => {
                 if (!e) {
                   setAddress(initialAddress);
