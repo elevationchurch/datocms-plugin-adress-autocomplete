@@ -1,5 +1,7 @@
 # DatoCMS Address Autocomplete
 
+<img width="822" alt="image" src="https://user-images.githubusercontent.com/127895784/229308757-078ca542-ff04-4e2f-a68f-d631c9b5c108.png">
+
 This plugin is a React-based implementation of Google's [Address Autocomplete](https://developers.google.com/maps/documentation/javascript/place-autocomplete) API, for [DatoCMS](https://www.datocms.com/).
 
 ## Prerequisites
