@@ -4,7 +4,50 @@
 
 This plugin is a React-based implementation of Google's [Address Autocomplete](https://developers.google.com/maps/documentation/javascript/place-autocomplete) API, for [DatoCMS](https://www.datocms.com/).
 
-Results will be saved as a JSON object, with granular fields that allow you to query for data such as city, state, and geocoordinates.
+Results will be saved as a JSON object, with granular fields that allow you to query for data such as city, state, and geocoordinates. For example:
+
+```json
+{
+  "street_number": "11701",
+  "route": "Elevation Pt Dr",
+  "neighborhood": "Ballantyne",
+  "locality": "Charlotte",
+  "administrative_area_level_2": "Mecklenburg County",
+  "administrative_area_level_1": "NC",
+  "country": "US",
+  "postal_code": "28277",
+  "name": "Elevation Church - Ballantyne",
+  "formatted_address": "11701 Elevation Pt Dr, Charlotte, NC 28277, USA",
+  "coordinates": {
+    "lat": 35.02993079999999,
+    "lng": -80.8557278
+  }
+}
+```
+
+## But, why?
+
+There are several reasons why we created this plugin:
+
+### 1. Data integrity
+
+Content creators were typing in addresses in plain text fields, which of course led to mistakes.
+
+### 2. Frontend capabilities
+
+We wanted to be able to link to Google and Apple Maps on the frontend, but couldn't reliably do so without the possibility of linking to an incorrect address.
+
+There's also the ability to display any part of the address, without being hacky (i.e., parsing a full address and trying to extract city, state, etc).
+
+### 3. Sorting by geocoordinates
+
+We'd like to present a user with events closest to them. Now, we can trust that the geocoordinates stored in our DB directly point to the location the event is happening in, rather than looking them up by address on the frontend.
+
+Geocoordinates are also passed directly to our search engine, meaning that _it_ does all the sorting for us. Win-win.
+
+### 4. User experience
+
+Our content creators can quickly and confidently enter addresses. No more copy-paste-verify.
 
 ## Prerequisites
 
