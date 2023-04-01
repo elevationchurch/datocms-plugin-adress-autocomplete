@@ -6,6 +6,9 @@
   "keywords": [
     "datocms-plugin"
   ],
+  "files": [
+    "build"
+  ],
   "datoCmsPlugin": {
     "title": "DatoCMS Plugin Address Autocomplete",
     "coverImage": "https://developers.google.com/maps/documentation/javascript/place-autocomplete",
