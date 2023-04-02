@@ -58,4 +58,14 @@ First off, you'll need to obtain an [API Key](https://developers.google.com/maps
 
 ## Installation
 
+Here's a link to this plugin's page on the [DatoCMS Marketplace](https://www.datocms.com/marketplace/plugins/i/datocms-plugin-address-autocomplete?s=address), in case you are reading this somewhere else. Just click on "Install this plugin!" from teh Marketplace and select the appropriate DatoCMS project to associate it to.
+
 ## Configuration
+There is only one (required) setting, and that's your Google Cloud API Key. 
+
+<img width="667" alt="image" src="https://user-images.githubusercontent.com/127895784/229323365-857d7842-20d7-463b-99a5-04e0f19da751.png">
+
+To use this plugin, create a JSON field, and under **Presentation**, change the **Field editor** property to `Address`. 
+
+<img width="867" alt="image" src="https://user-images.githubusercontent.com/127895784/229323386-d5e3f98b-4bce-4cf1-9458-547d60a0b46f.png">
+
