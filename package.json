@@ -16,7 +16,7 @@
   ],
   "datoCmsPlugin": {
     "title": "DatoCMS Plugin Address Autocomplete",
-    "coverImage": "https://developers.google.com/maps/documentation/javascript/place-autocomplete",
+    "coverImage": "https://user-images.githubusercontent.com/127895784/229308757-078ca542-ff04-4e2f-a68f-d631c9b5c108.png",
     "entryPoint": "build/index.html",
     "permissions": []
   },
