@@ -64,11 +64,11 @@ Here's a link to this plugin's page on the [DatoCMS Marketplace](https://www.dat
 
 There is only one (required) setting, and that's your Google Cloud API Key.
 
-<img width="667" alt="image" src="https://user-images.githubusercontent.com/127895784/229323365-857d7842-20d7-463b-99a5-04e0f19da751.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/127895784/229323365-857d7842-20d7-463b-99a5-04e0f19da751.png">
 
 To use this plugin, create a JSON field, and under **Presentation**, change the **Field editor** property to `Address`.
 
-<img width="867" alt="image" src="https://user-images.githubusercontent.com/127895784/229323386-d5e3f98b-4bce-4cf1-9458-547d60a0b46f.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/127895784/229323386-d5e3f98b-4bce-4cf1-9458-547d60a0b46f.png">
 
 ## Internationalization
 
@@ -76,4 +76,5 @@ You can also choose to receive results in a language other than English at the f
 
 When adding or editing the field in your model, visit the **Presentation** tab and use the dropdown menu to select a different value for the language. You will now see results in a different language based on what Google Maps provides.
 
-<img width="350" height="350" src="">
+<img width="350" alt="Screenshot of field configuration screen" src="https://user-images.githubusercontent.com/127895784/233721614-5684fec5-2ce6-4436-bd03-ae42b7393fba.png">
+
