@@ -112,7 +112,7 @@ const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
     setSrc(
       `https://maps.googleapis.com/maps/api/js?key=${
         (ctx.plugin.attributes.parameters as ValidParameters).mapsAPIKey
-      }&libraries=places`,
+      }&libraries=places&language=${(ctx.parameters.language as any).value}`,
     );
   }
 
