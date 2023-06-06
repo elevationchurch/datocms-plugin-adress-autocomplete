@@ -1,4 +1,4 @@
-import React, {
+import {
   FunctionComponent,
   createRef,
   useEffect,
@@ -19,6 +19,7 @@ import { ValidParameters } from '../ConfigScreen';
 import styles from './AddressInput.module.css';
 import saveFieldValue from '../../lib/saveFieldValue';
 import fillInAddress from '../../lib/fillInAddress';
+import getInitialValue from '../../lib/getInitialValue';
 
 interface AddressInputProps {
   ctx: RenderFieldExtensionCtx;
@@ -41,10 +42,18 @@ const initialAddress = {
   },
 };
 
+const resolvePath = (
+  obj: { [key: string]: any },
+  path: string,
+  defaultValue = {},
+) => path.split('.').reduce((o, p) => (o ? o[p] : defaultValue), obj);
+
 const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
   // Initial value doesn't change, which is why we put it in a ref
   const initialValue = useRef(
-    JSON.parse(ctx.formValues[ctx.fieldPath] as string),
+    typeof ctx.formValues[ctx.fieldPath] === 'string'
+      ? JSON.parse(ctx.formValues[ctx.fieldPath] as string)
+      : JSON.parse(getInitialValue(ctx.fieldPath, ctx.formValues, '.')),
   );
 
   // URL to Google's library
