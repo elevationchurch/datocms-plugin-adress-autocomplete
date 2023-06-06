@@ -42,12 +42,6 @@ const initialAddress = {
   },
 };
 
-const resolvePath = (
-  obj: { [key: string]: any },
-  path: string,
-  defaultValue = {},
-) => path.split('.').reduce((o, p) => (o ? o[p] : defaultValue), obj);
-
 const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
   // Initial value doesn't change, which is why we put it in a ref
   const initialValue = useRef(
