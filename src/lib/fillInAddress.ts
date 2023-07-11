@@ -29,6 +29,8 @@ const fillInAddress = (
   addressComponents.coordinates.lat = place.geometry?.location?.lat();
   addressComponents.coordinates.lng = place.geometry?.location?.lng();
 
+  addressComponents.utc_offset_minutes = place.utc_offset_minutes;
+
   saveFieldValue(ctx, addressComponents);
 
   setAddress(addressComponents as any);

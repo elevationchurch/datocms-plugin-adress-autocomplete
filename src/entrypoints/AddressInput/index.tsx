@@ -40,6 +40,7 @@ const initialAddress = {
     lat: '',
     lng: '',
   },
+  utc_offset_minutes: undefined,
 };
 
 const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
@@ -75,6 +76,7 @@ const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
             'geometry',
             'name',
             'formatted_address',
+            'utc_offset_minutes',
           ],
         },
       );
@@ -200,6 +202,14 @@ const AddressInput: FunctionComponent<AddressInputProps> = ({ ctx }) => {
             <TextInput
               disabled
               value={address.coordinates ? address.coordinates.lng : ''}
+            />
+          </FieldWrapper>
+          <FieldWrapper id='utc-offset-minutes' label='UTC Offset Minutes'>
+            <TextInput
+              disabled
+              value={
+                address.utc_offset_minutes ? address.utc_offset_minutes : ''
+              }
             />
           </FieldWrapper>
         </FieldGroup>
